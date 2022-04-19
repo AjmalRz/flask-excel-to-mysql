@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style.css') }}">
+
+</head>
+<body>
+        <h1>Excel to SQL</h1>
+        <form  method="POST" action="/success" enctype="multipart/form-data">
+            <select id="yu" name="database" required >
+              <option  value='none'>Select a Database</option>
+              {% for d in db %}
+                <option>{{ d }}</option>
+                {% endfor %}
+            </select>        
+            <input type="text" name="table" placeholder="Enter the Table Name" required >
+            <input  required name="excel" type="file">         
+            <input type="text" name="spreadsheet" required placeholder="Enter the spreadsheet name" >
+            <input type="text" name="col_type" required placeholder="Enter the Column name with sql datatype" >
+            <input type="text" name="rows" required placeholder="How much row you want?" >
+            <input type="text" name="col" required placeholder="How much column you want?" >
+            <button id="op" type='submit'>Submit</button>
+        </form>
+</body>
+</html>

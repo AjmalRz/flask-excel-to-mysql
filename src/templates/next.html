@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+
+</head>
+<body>
+    <div class="login-box">
+        <h2>Excel to SQL</h2>
+        <form method="POST" action="/succees" enctype="multipart/form-data">
+          <div class="user-box">
+
+            <input required name="file" type="file" multiple class="form-control-file">
+          </div>
+
+            <input type="text" name="spreadsheet" required placeholder="Enter the spreadsheet name" >
+
+            <input type="text" name="col_type" required placeholder="Enter the Column name with sql datatype" >
+
+            <input type="text" name="rows" required placeholder="How much row you want?" >
+
+            <input type="text" name="col" required placeholder="How much column you want?" >
+
+      </div>
+</body>
+</html>
