@@ -6,7 +6,7 @@ import os.path
 app = Flask(__name__)
 app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '1234'
+app.config['MYSQL_PASSWORD'] = '********'
 app.config['FILE_UPLOADS']=r"D:\PycharmProjects\dataconverter\src\static\upload"
 mysql = MySQL(app)
 @app.route('/', methods=["GET"])
